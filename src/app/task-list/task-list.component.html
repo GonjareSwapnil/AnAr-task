@@ -1,0 +1,12 @@
+<div class="container">
+    <mat-list role="list" >
+        <mat-list-item role="listitem" *ngFor="let task of taskList" title="{{ task.completed ? 'Task is completed!!!' : 'Task is in progress!!!'}}">
+            <mat-checkbox 
+                [(ngModel)]="task.completed" 
+                [value]="task.completed" >
+                    {{task.title}}
+            </mat-checkbox>
+            <mat-icon *ngIf="task.completed" class="custom-icon">thumb_up</mat-icon>
+        </mat-list-item>
+    </mat-list>
+</div>
